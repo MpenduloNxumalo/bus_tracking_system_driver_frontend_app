@@ -9,8 +9,14 @@ abstract class Factory implements AppLogger{
   Factory(this.context);
 
   Widget renderState(AppState state, Bloc bloc,){
+    reportStateRender(state);
     return createState(state, bloc);
   }
   Widget createState(AppState state, Bloc bloc);
+
+  reportStateRender(AppState state){
+    String message = "state: ${state.runtimeType.toString()} is being rendered";
+    infoLog(message);
+  }
 
 }

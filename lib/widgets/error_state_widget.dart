@@ -17,7 +17,7 @@ class ErrorStateWidget extends AppWidget {
 class _ErrorStateWidgetState extends State<ErrorStateWidget> implements AppLogger {
   @override
   Widget build(BuildContext context) {
-    WidgetUtil.logWidgetCreationInfo(widget,logger.i);
+    WidgetUtil.logWidgetCreationInfo(widget,infoLog);
     return Column(
       children: [
         Text(widget.errorMessage)

@@ -16,7 +16,7 @@ class LoadingStateWidget extends AppWidget {
 class _LoadingStateWidgetState extends State<LoadingStateWidget> implements AppLogger {
   @override
   Widget build(BuildContext context) {
-    WidgetUtil.logWidgetCreationInfo(widget,logger.i);
+    WidgetUtil.logWidgetCreationInfo(widget,infoLog);
     return const Center(child: CircularProgressIndicator(),);
   }
   @override
