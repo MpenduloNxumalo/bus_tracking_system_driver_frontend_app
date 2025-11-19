@@ -30,7 +30,7 @@ class DisplayAvailableRoutesViewState extends State<DisplayAvailableRoutesWidget
 
   @override
   Widget build(BuildContext context) {
-    WidgetUtil.logWidgetCreationInfo(widget,logger.i);
+    WidgetUtil.logWidgetCreationInfo(widget,infoLog);
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

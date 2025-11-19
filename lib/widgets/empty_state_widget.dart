@@ -17,7 +17,7 @@ class EmptyStateWidget extends AppWidget{
 class EmptyStateViewState extends State<EmptyStateWidget> implements AppLogger {
   @override
   Widget build(BuildContext context) {
-    WidgetUtil.logWidgetCreationInfo(widget,logger.i);
+    WidgetUtil.logWidgetCreationInfo(widget,infoLog);
     return Center(
       child: Text(widget.emptyStateMessage),
     );

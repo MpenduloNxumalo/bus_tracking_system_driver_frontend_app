@@ -2,11 +2,9 @@ import 'package:bus_tracking_system_driver_frontend_app/blocs/route_selection/ro
 import 'package:bus_tracking_system_driver_frontend_app/factories/factories.dart';
 import 'package:bus_tracking_system_driver_frontend_app/interfaces/app_interfaces/app_state.dart';
 import 'package:bus_tracking_system_driver_frontend_app/widgets/display_available_routes_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:logger/logger.dart';
-import 'package:logger/src/logger.dart';
 
 import '../blocs/route_selection/route_selection_bloc.dart';
 import '../blocs/route_selection/route_selection_state.dart';
@@ -55,8 +53,8 @@ class RouteSelectionStateFactory extends Factory {
             builder: (context) => PopScope(
               canPop: true,
               onPopInvoked: (didPop) {
-                print("Back pressed!");
-                routeSelectionBloc.add(EmptyStateAction());
+                infoLog("Back pressed!");
+                routeSelectionBloc.add(DisplayAvailableRoutesAction());
               },
               child: BroadcastAndTrackVehicleView(
                 chosenRoute: state.chosenRoute,
