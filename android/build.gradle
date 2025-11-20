@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // AGP version must be 8.5.2 or newer to support API 35
+        classpath 'com.android.tools.build:gradle:8.5.2'
+    }
+}
+
 allprojects {
     repositories {
         google()
