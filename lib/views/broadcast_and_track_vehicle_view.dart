@@ -28,14 +28,11 @@ class _BroadcastAndTrackVehicleViewState extends State<BroadcastAndTrackVehicleV
     return SafeArea(
       top: false,
       child: Scaffold(
-          body: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: BlocBuilder<BroadcastAndTrackVehicleBloc, BroadcastAndTrackVehicleState>(
-              builder: (context, state) {
-                final broadcastAndTrackVehicleBloc = context.read<BroadcastAndTrackVehicleBloc>();
-                return factory.renderState(state, broadcastAndTrackVehicleBloc);
-              },
-            ),
+          body: BlocBuilder<BroadcastAndTrackVehicleBloc, BroadcastAndTrackVehicleState>(
+            builder: (context, state) {
+              final broadcastAndTrackVehicleBloc = context.read<BroadcastAndTrackVehicleBloc>();
+              return factory.renderState(state, broadcastAndTrackVehicleBloc);
+            },
           )),
     );
   }

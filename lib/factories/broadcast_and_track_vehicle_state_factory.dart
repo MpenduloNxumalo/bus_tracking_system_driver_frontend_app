@@ -28,8 +28,7 @@ class BroadcastAndTrackVehicleStateFactory extends Factory {
       return const EmptyStateWidget(emptyStateMessage: '',);
     } else if (state is LoadingState) {
       print("loading");
-      broadcastAndTrackVehicleBloc
-          .add(DisplayRouteAndCurrentLocationStateAction(chosenRoute));
+      broadcastAndTrackVehicleBloc.add(DisplayRouteAndCurrentLocationStateAction(chosenRoute));
       return const LoadingStateWidget();
     } else if (state is DisplayRouteAndCurrentLocationState) {
       return DisplayRouteAndCurrentLocationStateWidget();
